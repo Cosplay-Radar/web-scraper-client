@@ -6,7 +6,7 @@ export function Search () {
     const {data, loading} = useFetch('http://localhost:8000/search');
     return (
         <div>
-            <h1>Im search component</h1>
+            <h1>Cosplay Conventions</h1>
             { loading ? (
                 'Loading, please wait.'
             ) : (
