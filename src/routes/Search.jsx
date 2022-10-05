@@ -1,12 +1,16 @@
 import React from 'react';
 
 import useFetch from '../hooks/useFetch';
+import './search.css'
 
 export function Search () {
     const {data, loading} = useFetch('http://localhost:8000/search');
     return (
         <div>
-            <h1>Cosplay Conventions</h1>
+            <div className='titleContainer'>
+                <h1>Cosplay Conventions</h1>
+            </div>
+            <div className='contentContainer'>
             { loading ? (
                 'Loading, please wait.'
             ) : (
@@ -20,6 +24,7 @@ export function Search () {
                     })}
                 </div>
             )}
+            </div>
         </div>
     )
 }
