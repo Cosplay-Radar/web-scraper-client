@@ -1,9 +1,9 @@
 import React from 'react';
 
-import useFetch from '../hooks/useFetch.js';
+import useFetch from '../hooks/useFetch';
 
-export const Search = () => {
-    const {data, loading} = useFetch('localhost:8000');
+export function Search () {
+    const {data, loading} = useFetch('http://localhost:8000');
     return (
         <div>
             <h1>Im search component</h1>
