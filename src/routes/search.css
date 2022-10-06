@@ -9,16 +9,28 @@
 }
 
 .conventionContainer {
-    background-color: white;
-    border-radius: 5px;
+    padding: 5px;
     margin: 10px;
+    border-bottom: 1px dotted black;
 }
 
 .characterContainer {
-    background-color: white;
-    border-radius: 5px;
     padding: 5px;
     margin: 10px;
+    border-bottom: 1px dotted black;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.columnTitle {
+    display: flex;
+    justify-content: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .titleContainer {
