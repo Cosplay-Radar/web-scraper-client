@@ -1,3 +1,7 @@
+.contentBody {
+    background-color: rgb(246, 246, 246);
+}
+
 .resultsContainer {
     display: flex;
     flex-direction: row;
@@ -5,11 +9,25 @@
 }
 
 .conventionContainer {
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px;
+}
 
+.characterContainer {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
 }
 
 .titleContainer {
     margin: 10px;
+    background-color: rgb(98, 98, 247);
+    padding: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
 }
 
 .searchList {

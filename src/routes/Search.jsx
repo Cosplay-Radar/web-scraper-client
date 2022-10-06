@@ -8,7 +8,7 @@ export function Search () {
     const characters = [{title: "Random character title", snippet: "A useful snippet of information for popular characters", link: "hyperlink"}];
     const conventions = [{title: "Random convention title", snippet: "A useful snippet of information for upcoming conventions", link: "hyperlink"}];
     return (
-        <div>
+        <div className='contentBody'>
             <div className='titleContainer'>
                 <h1>Cosplay Market Research</h1>
             </div>
