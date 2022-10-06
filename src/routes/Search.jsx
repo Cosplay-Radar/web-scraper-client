@@ -5,8 +5,8 @@ import './search.css'
 
 export function Search () {
     const {data, loading} = useFetch('http://localhost:8000/search');
-    const characters = data.characters;
-    const conventions = data.conventions;
+    const characters = [{title: "Random character title", snippet: "A useful snippet of information for popular characters", link: "hyperlink"}];
+    const conventions = [{title: "Random convention title", snippet: "A useful snippet of information for upcoming conventions", link: "hyperlink"}];
     return (
         <div>
             <div className='titleContainer'>
@@ -17,7 +17,7 @@ export function Search () {
                 'Loading, please wait.'
             ) : (
                 <div className='searchList'>
-                    { conventions.map(result => {
+                    { characters.map(result => {
                         return <div className='search'>
                             <h3>{result.title}</h3>
                             <p>{result.snippet}</p>
