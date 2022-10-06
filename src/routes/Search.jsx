@@ -5,8 +5,8 @@ import './search.css'
 
 export function Search () {
     const {data, loading} = useFetch('http://localhost:8000/search');
-    const characters = [{title: "Random character title", snippet: "A useful snippet of information for popular characters", link: "hyperlink"}];
-    const conventions = [{title: "Random convention title", snippet: "A useful snippet of information for upcoming conventions", link: "hyperlink"}];
+    const characters = [{title: "Random character title", snippet: "A useful snippet of information for popular characters", link: "hyperlink"}, {title: "A second title", snippet: "A useful snippet of information for more popular characters", link: "hyperlink"}];
+    const conventions = [{title: "Random convention title", snippet: "A useful snippet of information for upcoming conventions", link: "hyperlink"}, {title: "A second convetnion title", snippet: "A useful snippet of information for more upcoming events", link: "hyperlink"}];
     return (
         <div className='contentBody'>
             <div className='titleContainer'>

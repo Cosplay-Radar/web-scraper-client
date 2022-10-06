@@ -11,13 +11,11 @@
 .conventionContainer {
     padding: 5px;
     margin: 10px;
-    border-bottom: 1px dotted black;
 }
 
 .characterContainer {
     padding: 5px;
     margin: 10px;
-    border-bottom: 1px dotted black;
 }
 
 .column {
@@ -50,5 +48,7 @@
 }
 
 .search {
-
+    border-bottom: 1px dotted black;
+    margin: 5px;
+    padding: 5px;
 }
