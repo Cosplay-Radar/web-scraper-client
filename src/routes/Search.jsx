@@ -5,27 +5,26 @@ import './search.css'
 
 export function Search () {
     const {data, loading} = useFetch('http://localhost:8000/search');
-    const characters = [{title: "Random character title", snippet: "A useful snippet of information for popular characters", link: "hyperlink"}, {title: "A second title", snippet: "A useful snippet of information for more popular characters", link: "hyperlink"}];
-    const conventions = [{title: "Random convention title", snippet: "A useful snippet of information for upcoming conventions", link: "hyperlink"}, {title: "A second convetnion title", snippet: "A useful snippet of information for more upcoming events", link: "hyperlink"}];
+    console.log(data)
+
     return (
         <div className='contentBody'>
             <div className='titleContainer'>
                 <h1>Cosplay Market Research</h1>
             </div>
             <div className='resultsContainer'>
-                <div className='column'>
+            <div className='column'>
                     <h2 className='columnTitle'>Popular Characters</h2>
                     <div className='characterContainer'>
                     { loading ? (
                         'Loading, please wait.'
                     ) : (
                         <div className='searchList'>
-                            { characters.map(result => {
+                            { data.characters.map(result => {
                                 return <div className='search'>
-                                    <h3>{result.title}</h3>
-                                    <p>{result.snippet}</p>
-                                    <a href={result.link}>{result.link}</a>
-                                </div>
+                                            <h3>{result.title}</h3>
+                                            <p>{result.link}</p>
+                                        </div>
                             })}
                         </div>
                     )}
@@ -38,11 +37,9 @@ export function Search () {
                         'Loading, please wait.'
                     ) : (
                         <div className='searchList'>
-                            { conventions.map(result => {
+                            { data['conventions'].map(result => {
                                 return <div className='search'>
-                                    <h3>{result.title}</h3>
-                                    <p>{result.snippet}</p>
-                                    <a href={result.link}>{result.link}</a>
+                                    <h3>{result.convention}</h3>
                                 </div>
                             })}
                         </div>
