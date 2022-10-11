@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './App.css';
-import { Search } from './routes/Search'
+import { Convention } from './routes/Convention.jsx'
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Search/>}/>
+        <Route path='/conventions' element={<Convention/>}/>
       </Routes>
     </BrowserRouter>
   );
