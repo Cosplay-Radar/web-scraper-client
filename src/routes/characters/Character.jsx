@@ -1,10 +1,11 @@
 import React from 'react';
 
-import useFetch from '../hooks/useFetch';
-import './convention.css'
+import useFetch from '../../hooks/useFetch';
+import './character.css';
+import '../conventions/convention.css';
 
-export function Convention () {
-    const {data, loading} = useFetch('http://localhost:8000/conventions');
+export function Character () {
+    const {data, loading} = useFetch('http://localhost:8000/characters');
 
     return (
         <div className='contentBody'>
@@ -13,7 +14,7 @@ export function Convention () {
             </div>
             <div className='resultsContainer'>
                 <div className='column'>
-                    <h2 className='columnTitle'>Upcoming Conventions</h2>
+                    <h2 className='columnTitle'>Current Popular Characters</h2>
                     <div className='conventionContainer'>
                     { loading ? (
                         'Loading, please wait.'
@@ -21,7 +22,7 @@ export function Convention () {
                         <div className='searchList'>
                             { data.map(result => {
                                 return <div className='search'>
-                                    <h3>{result.convention}</h3>
+                                    <h3>{result.title}</h3>
                                 </div>
                             })}
                         </div>
