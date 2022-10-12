@@ -22,7 +22,7 @@ export function Character () {
                         <div className='searchList'>
                             { data.map(result => {
                                 return <div className='search'>
-                                    <h3>{result.title}</h3>
+                                    <a href={`https://google.com/${result.href}`}>{result.title}</a>
                                 </div>
                             })}
                         </div>
