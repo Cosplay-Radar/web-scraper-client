@@ -11,17 +11,12 @@
 .conventionContainer {
     padding: 5px;
     margin: 10px;
-}
-
-.characterContainer {
-    padding: 5px;
-    margin: 10px;
+    background-color: white;
 }
 
 .column {
     display: flex;
     flex-direction: column;
-    background-color: white;
     border-radius: 5px;
 }
 
@@ -48,7 +43,6 @@
 }
 
 .search {
-    border-bottom: 1px dotted black;
-    margin: 5px;
-    padding: 5px;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
 }

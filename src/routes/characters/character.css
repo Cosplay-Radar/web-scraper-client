@@ -1,4 +1,19 @@
 .characterContainer {
-    padding: 5px;
-    margin: 10px;
+    background-color: white;
+}
+
+.characterPriority {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:x-large;
+}
+
+.character {
+    text-decoration: none;
+    color: blue;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:large;
+}
+
+.character:hover {
+    color:rgb(98, 98, 247);
 }
