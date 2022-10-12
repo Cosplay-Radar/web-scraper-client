@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Navbar } from '../../components/Navbar';
 import useFetch from '../../hooks/useFetch';
 import './convention.css'
 
@@ -8,9 +9,7 @@ export function Convention () {
 
     return (
         <div className='contentBody'>
-            <div className='titleContainer'>
-                <h1>Cosplay Market Research</h1>
-            </div>
+            <Navbar/>
             <div className='resultsContainer'>
                 <div className='column'>
                     <h2 className='columnTitle'>Upcoming Conventions</h2>

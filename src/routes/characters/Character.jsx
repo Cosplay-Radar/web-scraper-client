@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Navbar } from '../../components/Navbar';
 import useFetch from '../../hooks/useFetch';
 import './character.css';
 import '../conventions/convention.css';
@@ -10,9 +11,7 @@ export function Character () {
     let index = 1
     return (
         <div className='contentBody'>
-            <div className='titleContainer'>
-                <h1>Cosplay Market Research</h1>
-            </div>
+            <Navbar/>
             <div className='resultsContainer'>
                 <div className='column'>
                     <h2 className='columnTitle'>Current Popular Characters</h2>
