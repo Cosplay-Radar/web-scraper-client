@@ -26,15 +26,6 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.titleContainer {
-    margin: 10px;
-    background-color: rgb(98, 98, 247);
-    padding: 5px;
-    color: white;
-    display: flex;
-    justify-content: center;
-}
-
 .searchList {
     display: flex;
     flex-direction: column;
