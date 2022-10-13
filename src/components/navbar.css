@@ -7,6 +7,14 @@
     color: rgb(189, 189, 189);
 }
 
+.logo {
+    max-width: 120px;
+    border: 7px white solid;
+    border-radius: 100px;
+    margin: 10px;
+    padding: 1px;
+}
+
 .navContainer {
     display: flex;
     flex-direction: column;

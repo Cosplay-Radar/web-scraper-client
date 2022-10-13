@@ -1,0 +1,15 @@
+.welcomeTitle {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.aboutContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.developerContainer {
+
+}
