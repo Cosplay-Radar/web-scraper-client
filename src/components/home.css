@@ -8,6 +8,7 @@
     line-height: 25pt;
     word-spacing: 3px;
     align-items: center;
+    
 }
 
 .content {
@@ -36,4 +37,14 @@
 
 .aboutContent {
     max-width: 90%;
+}
+
+#footer {
+    background-color: rgb(98, 98, 247);
+    padding: 10px;
+    color: white;
+}
+
+.footerText {
+    margin-left: 2%;
 }
