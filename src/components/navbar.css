@@ -1,4 +1,13 @@
-.titleContainer {
+.homeLink {
+    text-decoration: none;
+    color: white;
+}
+
+.homeLink:hover {
+    color: rgb(189, 189, 189);
+}
+
+.navContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,6 +17,12 @@
     color: white;
     display: flex;
     justify-content: center;
+}
+
+.titleContainer {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
 }
 
 .linkContainer {
