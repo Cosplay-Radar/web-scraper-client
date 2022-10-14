@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar } from './Navbar';
+import { Footer } from './Footer';
 import './home.css';
 
 export function Home () {
@@ -33,10 +34,7 @@ export function Home () {
                     </div>
                 </div>
             </div>
-            <footer id='footer'>
-                <p>Websites used: <b>animecons.com, google.com</b></p>
-            </footer>
-
+            <Footer/>
         </div>
     )
 }

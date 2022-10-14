@@ -1,0 +1,12 @@
+#footer {
+    background-color: rgb(98, 98, 247);
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-image {
+    max-height: 50px;
+    border-radius: 10px;
+  }
