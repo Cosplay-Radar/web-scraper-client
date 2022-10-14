@@ -4,6 +4,7 @@ import { Navbar } from '../../components/Navbar';
 import useFetch from '../../hooks/useFetch';
 import './character.css';
 import '../conventions/convention.css';
+import { Footer } from '../../components/Footer';
 
 export function Character () {
     const {data, loading} = useFetch('http://localhost:8000/characters');
@@ -31,6 +32,7 @@ export function Character () {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

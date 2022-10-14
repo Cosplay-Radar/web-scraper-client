@@ -1,4 +1,5 @@
 import React from 'react';
+import { Footer } from '../../components/Footer';
 
 import { Navbar } from '../../components/Navbar';
 import useFetch from '../../hooks/useFetch';
@@ -28,6 +29,7 @@ export function Convention () {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }
