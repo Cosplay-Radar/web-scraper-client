@@ -23,7 +23,7 @@ export function Character () {
                             { data.map(result => {
                                 return <div className='search'>
                                     <p className='character'>{result.title}</p>
-                                    <img alt='character' src={result.href}/>
+                                    <img className='refArt' alt='character' src={result.href}/>
                                 </div>
                             })}
                         </div>

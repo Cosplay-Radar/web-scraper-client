@@ -14,6 +14,6 @@
     font-size:large;
 }
 
-.character:hover {
-    color:rgb(98, 98, 247);
+.refArt {
+    max-width: 500px;
 }
