@@ -6,7 +6,7 @@ import useFetch from '../../hooks/useFetch';
 import './convention.css'
 
 export function Convention () {
-    const {data, loading} = useFetch(`${process.env.host}/conventions`);
+    const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions`);
 
     return (
         <div className='contentBody'>

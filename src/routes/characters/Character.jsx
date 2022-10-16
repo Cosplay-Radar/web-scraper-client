@@ -7,7 +7,7 @@ import '../conventions/convention.css';
 import { Footer } from '../../components/Footer';
 
 export function Character () {
-    const {data, loading} = useFetch(`${process.env.host}/characters`);
+    const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/characters`);
 
     let index = 1
     return (
