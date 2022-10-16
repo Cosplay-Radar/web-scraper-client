@@ -23,8 +23,8 @@ export function Character () {
                         <div className='searchList'>
                             { data.map(result => {
                                 return <div className='search'>
-                                    <p className='characterPriority'>Number {index++}</p>
-                                    <a className='character' href={`https://google.com/${result.href}`}>{result.title}</a>
+                                    <p className='character'>{result.title}</p>
+                                    <img alt='character' src={`result.href`}/>
                                 </div>
                             })}
                         </div>
