@@ -6,7 +6,7 @@ import useFetch from '../../hooks/useFetch';
 import './convention.css'
 
 export function Convention () {
-    const {data, loading} = useFetch('http://localhost:8000/conventions');
+    const {data, loading} = useFetch(`${process.env.host}/conventions`);
 
     return (
         <div className='contentBody'>

@@ -7,7 +7,7 @@ import '../conventions/convention.css';
 import { Footer } from '../../components/Footer';
 
 export function Character () {
-    const {data, loading} = useFetch('http://localhost:8000/characters');
+    const {data, loading} = useFetch(`${process.env.host}/characters`);
 
     let index = 1
     return (
