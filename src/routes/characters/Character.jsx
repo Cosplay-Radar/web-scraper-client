@@ -9,7 +9,6 @@ import { Footer } from '../../components/Footer';
 export function Character () {
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/characters`);
 
-    let index = 1
     return (
         <div className='contentBody'>
             <Navbar/>
