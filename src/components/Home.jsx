@@ -16,7 +16,7 @@ export function Home () {
                         Try clicking on the links above to discover some useful information.
                     </p>
                     <p>
-                        If you would like to see the Github repository you can click on this link: <a href='https://github.com/Cosplay-Radar'>Cosplay Radar</a>
+                        If you would like to see the Github repository you can click on this link, feel free to contribute or make suggestions: <a href='https://github.com/Cosplay-Radar'>Cosplay Radar</a>
                     </p>
                     <p>
                         You can locate the developers contact details, the store page, and social media at the bottom of the page.  Feel free to get in contact
