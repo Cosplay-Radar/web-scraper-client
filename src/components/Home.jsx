@@ -22,6 +22,10 @@ export function Home () {
                         You can locate the developers contact details, the store page, and social media at the bottom of the page.  Feel free to get in contact
                         if you would like to contribute or have any suggestions for the project.
                     </p>
+                    <p>
+                        You may need to open the backend API to fetch data, follow the link to deploy it and get some data to search:
+                    </p>
+                    <a href='https://cosplay-radar.herokuapp.com/'>Backend API</a>
                 </div>
                     <h3>About the Developer:</h3>
                 <div className='developerContent'>
