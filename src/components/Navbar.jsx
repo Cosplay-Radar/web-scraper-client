@@ -14,6 +14,7 @@ export function Navbar () {
                 <Link className='navLink' to={'/conventions'}>Upcoming conventions</Link>
                 <Link className='navLink' to={'/characters'}>Most Popular Characters</Link>
             </div>
-        </div
+        </div>
+
     )
 }
