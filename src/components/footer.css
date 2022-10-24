@@ -5,10 +5,10 @@
 
 #footer {
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-direction: column;
     color: white;
-    padding: 7px;
+    padding: 3px;
     background-color: rgb(98, 98, 247);
 }
 
