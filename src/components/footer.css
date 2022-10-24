@@ -6,6 +6,7 @@
 #footer {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     color: white;
     padding: 7px;
     background-color: rgb(98, 98, 247);
