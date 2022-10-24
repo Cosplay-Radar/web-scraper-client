@@ -1,9 +1,12 @@
-#footer {
-    background-color: rgb(98, 98, 247);
+#links-container {
     padding: 7px;
     color: white;
     display: flex;
     justify-content: space-around;
+}
+
+#footer {
+    background-color: rgb(98, 98, 247);
 }
 
 .contact-image {
