@@ -1,11 +1,13 @@
 #links-container {
-    padding: 7px;
-    color: white;
     display: flex;
     justify-content: space-around;
 }
 
 #footer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 7px;
     background-color: rgb(98, 98, 247);
 }
 
