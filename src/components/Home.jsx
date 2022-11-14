@@ -24,7 +24,7 @@ export function Home () {
                     </p>
                 </div>
             </div>
-            <Footer id='footer'/>
+            <Footer/>
         </div>
     )
 }

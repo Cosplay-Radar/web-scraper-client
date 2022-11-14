@@ -31,7 +31,7 @@ export function Character () {
                     </div>
                 </div>
             </div>
-            <Footer id='footer'/>
+            <Footer/>
         </div>
     )
 }

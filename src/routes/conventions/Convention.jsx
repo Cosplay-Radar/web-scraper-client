@@ -29,7 +29,7 @@ export function Convention () {
                     </div>
                 </div>
             </div>
-            <Footer id='footer'/>
+            <Footer/>
         </div>
     )
 }
