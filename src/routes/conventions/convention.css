@@ -1,11 +1,6 @@
 
 .conventionContainer {
-    margin: 15px;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content:space-evenly;
-    align-items: center;
-    flex-direction: row;
+    display: inline-grid;
 }
 
 .column {
@@ -21,9 +16,10 @@
 }
 
 .searchList {
-
     margin: 10px;
     max-width: 400px;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 .search {
