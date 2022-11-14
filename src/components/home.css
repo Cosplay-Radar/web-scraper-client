@@ -42,3 +42,8 @@
 .aboutContent {
     max-width: 90%;
 }
+
+Footer {
+    position: absolute;
+    bottom: 0;
+  }
