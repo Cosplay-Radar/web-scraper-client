@@ -38,3 +38,9 @@
 .aboutContent {
     max-width: 90%;
 }
+
+Footer {
+    bottom: 0;
+    height: 120px;
+    width: 100%;
+}
