@@ -1,6 +1,11 @@
 #links-container {
     display: flex;
     justify-content: space-evenly;
+    padding: 10px;
+}
+
+#contact-link {
+    margin-right: 10px;
 }
 
 #footer {
