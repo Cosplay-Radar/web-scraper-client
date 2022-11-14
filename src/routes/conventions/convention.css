@@ -37,3 +37,9 @@
     border-bottom: 1px solid black;
     padding-bottom: 30px;
 }
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
