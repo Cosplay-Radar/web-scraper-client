@@ -1,9 +1,4 @@
 
-.conventionContainer {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-}
 
 .column {
     display: flex;
@@ -18,7 +13,9 @@
 }
 
 .searchList {
-    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .search {
