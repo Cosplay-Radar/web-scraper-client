@@ -16,3 +16,8 @@
     max-height: 50px;
     border-radius: 10px;
   }
+
+Footer {
+    position: absolute;
+    bottom: 0;
+  }

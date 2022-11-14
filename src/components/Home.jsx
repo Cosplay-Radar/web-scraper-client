@@ -5,7 +5,7 @@ import './home.css';
 
 export function Home () {
     return (
-        <div>
+        <div id='homeContainer'>
             <Navbar/> 
             <div className='aboutContainer'>
                 <div className='content'>

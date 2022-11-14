@@ -1,3 +1,7 @@
+#homeContainer {
+    position: relative;
+}
+
 .aboutContainer {
     display: flex;
     flex-direction: column;
