@@ -1,7 +1,3 @@
-#homeContainer {
-    position: relative;
-}
-
 .aboutContainer {
     display: flex;
     flex-direction: column;
@@ -42,8 +38,3 @@
 .aboutContent {
     max-width: 90%;
 }
-
-Footer {
-    position: absolute;
-    bottom: 0;
-  }
