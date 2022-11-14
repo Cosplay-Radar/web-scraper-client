@@ -1,11 +1,9 @@
-.contentBody {
-    background-color: rgb(246, 246, 246);
-}
-
 .resultsContainer {
-    display: flex;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
     flex-direction: row;
-    justify-content: space-around;
 }
 
 .conventionContainer {
