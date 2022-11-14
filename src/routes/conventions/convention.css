@@ -1,6 +1,6 @@
 
 .conventionContainer {
-    width: 25%;
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
 }
@@ -19,6 +19,7 @@
 
 .searchList {
     flex: 1 1 25%;
+    max-width: 300px;
 }
 
 .search {
