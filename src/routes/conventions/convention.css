@@ -18,10 +18,10 @@
 }
 
 .searchList {
-    flex: 1 1 25%;
-    max-width: 300px;
+    max-width: 100%;
 }
 
 .search {
-    padding-bottom: 30px;
+    padding-bottom: 10px;
+    flex: 1 1 25%;
 }
