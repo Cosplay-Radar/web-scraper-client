@@ -1,6 +1,6 @@
 
 .conventionContainer {
-    width: 100%;
+    width: 25%;
     display: flex;
     flex-flow: row wrap;
 }
