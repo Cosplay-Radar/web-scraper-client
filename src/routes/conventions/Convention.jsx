@@ -16,7 +16,7 @@ export function Convention () {
                     <h2 className='columnTitle'>Upcoming Conventions</h2>
                     <div className='conventionContainer'>
                     { loading ? (
-                        'Loading, please wait.'
+                        <p id='loadingText'>'Loading, please wait.'</p>
                     ) : (
                         <div className='searchList'>
                             { data.map(result => {

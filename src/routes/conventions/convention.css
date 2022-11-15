@@ -1,4 +1,7 @@
-
+.conventionContainer {
+    display: flex;
+    align-items: center;
+}
 
 .column {
     display: flex;
@@ -20,5 +23,7 @@
 
 .search {
     padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     flex: 1 1 30%;
 }
