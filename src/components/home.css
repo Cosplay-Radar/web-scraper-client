@@ -38,3 +38,8 @@
 .aboutContent {
     max-width: 90%;
 }
+
+#homeFooter {
+    bottom: 0;
+    position:fixed;
+}
