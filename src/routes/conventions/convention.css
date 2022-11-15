@@ -23,9 +23,8 @@
 }
 
 .search {
-    padding: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
+    padding: 5px;
+    margin: 5px;
     flex: 1 1 30%;
     background-color: rgb(240, 240, 240);
 }
