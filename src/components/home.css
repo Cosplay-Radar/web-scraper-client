@@ -8,17 +8,20 @@
     line-height: 30pt;
     word-spacing: 3px;
     align-items: center;
-    
 }
 
 .content {
-    display: flex;
+    display:inline-block;
     flex-wrap: wrap;
     justify-content:space-evenly;
     flex-direction: column;
     align-items:center;
     padding: 10px;
     margin: 5px;
+}
+
+.content > p {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .developerContent {
@@ -37,10 +40,4 @@
 
 .aboutContent {
     max-width: 90%;
-}
-
-Footer {
-    bottom: 0;
-    position:absolute;
-    width: 100%;
 }

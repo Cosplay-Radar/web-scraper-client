@@ -9,7 +9,7 @@ export function Home () {
             <Navbar/> 
             <div className='aboutContainer'>
                 <div className='content'>
-                    <h3>About Cosplay Radar</h3>
+                    <h3>About</h3>
                     <p>
                         Cosplay Radar was built for Adventurer's Hoard: a 3D design/printing company that specializes in cosplay and miniature models.  
                         This application will be able to show you upcoming conventions and the current most popular characters.  Plan your product releases and what to research for the future!
