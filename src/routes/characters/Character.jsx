@@ -21,7 +21,7 @@ export function Character () {
                     ) : (
                         <div className='searchList'>
                             { data.map(result => {
-                                return <div className='search'>
+                                return <div className='searchCharacter'>
                                     <p className='character'>{result.title}</p>
                                     <img className='refArt' alt='character' src={result.href}/>
                                 </div>
