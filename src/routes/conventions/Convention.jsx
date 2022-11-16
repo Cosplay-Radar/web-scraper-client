@@ -9,11 +9,11 @@ export function Convention () {
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions`);
 
     function Separate (object) {
-        const result = {
-            name: "",
-            date: "",
-            location: "",
-        }
+        // const result = {
+        //     name: "",
+        //     date: "",
+        //     location: "",
+        // }
         let string = object.convention;
         // while (result.location === "") {
         //     result.name = string.substring(string.indexOf('\n'), string.indexOf('\n') + 1)
