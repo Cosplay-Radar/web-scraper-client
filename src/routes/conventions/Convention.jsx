@@ -21,7 +21,9 @@ export function Convention () {
                         <div className='searchList'>
                             { data.map(result => {
                                 return <div className='search'>
-                                    <h3>{result.convention}</h3>
+                                    <h3>{result.title}</h3>
+                                    <h4>{result.date}</h4>
+                                    <h4>{result.location}</h4>
                                 </div>
                             })}
                         </div>
