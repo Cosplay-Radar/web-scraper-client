@@ -19,11 +19,7 @@ export function Convention () {
                         <p id='loadingText'>'Loading, please wait.'</p>
                     ) : (
                         <div className='searchList'>
-                            { data.map(result => {
-                                return <div className='search'>
-                                    <h3>{result.convention.title}</h3>
-                                </div>
-                            })}
+                            { console.log(data)}
                         </div>
                     )}
                     </div>
