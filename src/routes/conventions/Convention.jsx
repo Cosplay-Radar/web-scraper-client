@@ -14,7 +14,7 @@ export function Convention () {
         //     date: "",
         //     location: "",
         // }
-        let string = object.convention;
+        let string = object.convention.split([' ']);
         // while (result.location === "") {
         //     result.name = string.substring(string.indexOf('\n'), string.indexOf('\n') + 1)
         //     result.date = string.substring(string.indexOf('\n') + 1, string.indexOf('\n') + 2)
