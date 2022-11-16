@@ -20,8 +20,8 @@ export function Convention () {
                     ) : (
                         <div className='searchList'>
                             { data.map(result => {
-                                console.log(result)
-                                return result
+                                console.log(result.title)
+                                // return result
                             })}
                         </div>
                     )}
