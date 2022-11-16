@@ -15,12 +15,13 @@ export function Convention () {
             location: "",
         }
         let string = object.convention;
-        while (result.location === "") {
-            result.name = string.substring(string.indexOf('\n'), string.indexOf('\n') + 1)
-            result.date = string.substring(string.indexOf('\n') + 1, string.indexOf('\n') + 2)
-            result.date = string.substring(string.indexOf('\n') + 2, string.indexOf('\n') + 3)
-        }
-        return result;
+        // while (result.location === "") {
+        //     result.name = string.substring(string.indexOf('\n'), string.indexOf('\n') + 1)
+        //     result.date = string.substring(string.indexOf('\n') + 1, string.indexOf('\n') + 2)
+        //     result.date = string.substring(string.indexOf('\n') + 2, string.indexOf('\n') + 3)
+        // }
+        console.log(string)
+        return string;
     }
 
     return (
