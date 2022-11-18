@@ -33,6 +33,7 @@ export function Convention () {
                     ) : (
                         <div className='searchList'>
                             { data.map(result => {
+                                console.log(result, typeof result)
                                 const output = detailsSplit(result.description)
                                 return <div className='search'>
                                     <h3>{result.title}</h3>

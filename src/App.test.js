@@ -3,6 +3,7 @@ import App from './App';
 
 test('detailsSplit can divide the retrieved data', () => {
   const detailsSplit = (string) => {
+    console
     const output = {date:'', location: ''}
     for (let i = string.length; i > 0; i--) {
       if (!isNaN(parseInt(string[i]))) {
