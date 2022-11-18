@@ -29,11 +29,11 @@
     background-color: rgb(240, 240, 240);
 }
 
-.titleContainer {
+.searchTitleContainer {
     margin-left: 5px;
     border-bottom: black 1px solid;
 }
 
-.detailsContainer {
+.serachDetailsContainer {
     margin-left: 10px;
 }

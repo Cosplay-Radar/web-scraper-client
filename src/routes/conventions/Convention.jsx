@@ -36,10 +36,10 @@ export function Convention () {
                                 if (result === undefined) return <div></div>;
                                 const output = detailsSplit(result.details)                              
                                     return <div className='search'>
-                                        <div className='titleContainer'>
+                                        <div className='searchTitleContainer'>
                                             <h3 className='searchTitle'>{result.title}</h3>
                                         </div>
-                                        <div className='detailsContainer'>
+                                        <div className='searchDetailsContainer'>
                                             <p className='searchDetails'>{output.location}</p>
                                             <p className='searchDetails'>{output.date}</p>
                                         </div>
