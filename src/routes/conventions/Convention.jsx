@@ -35,7 +35,7 @@ export function Convention () {
                             { data.map(result => {
                                 if (result === undefined) return <div></div>;
                                 console.log(result, typeof result)
-                                const output = detailsSplit(result.description)
+                                const output = detailsSplit(result.details)
                                 return <div className='search'>
                                     <h3>{result.title}</h3>
                                     <p>{output.location}</p>
