@@ -8,6 +8,18 @@ import './convention.css'
 export function Convention () {
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions`);
 
+    const detailsSplit = (string) => {
+        const output = {date:'', location: ''}
+        for (let i = string.length; i > 0; i--) {
+          if (!isNaN(parseInt(string[i]))) {
+            output.date = string.slice(0, i+1);
+            output.location = string.slice(i+1, string.length);
+            return output
+          }
+        }
+        return output
+      }
+
     return (
         <div className='contentBody'>
             <Navbar/>
@@ -20,10 +32,11 @@ export function Convention () {
                     ) : (
                         <div className='searchList'>
                             { data.map(result => {
-                                console.log(result)
+                                const output = detailsSplit(result.description)
                                 return <div className='search'>
                                     <h3>{result.title}</h3>
-                                    <p>{result.details}</p>
+                                    <p>{output.location}</p>
+                                    <p>{output.time}</p>
                                 </div>
                             })}
                         </div>
