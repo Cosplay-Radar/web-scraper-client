@@ -17,7 +17,7 @@
 }
 
 .searchList {
-    width: 100%;
+    width: 70%;
     display: flex;
     flex-flow: row wrap;
 }
@@ -27,4 +27,13 @@
     margin: 5px;
     flex: 1 1 30%;
     background-color: rgb(240, 240, 240);
+}
+
+.titleContainer {
+    margin-left: 5px;
+    border-bottom: black 1px solid;
+}
+
+.detailsContainer {
+    margin-left: 10px;
 }

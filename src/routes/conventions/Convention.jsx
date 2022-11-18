@@ -34,12 +34,16 @@ export function Convention () {
                         <div className='searchList'>
                             { data.map(result => {
                                 if (result === undefined) return <div></div>;
-                                const output = detailsSplit(result.details)
-                                return <div className='search'>
-                                    <h3>{result.title}</h3>
-                                    <p>{output.location}</p>
-                                    <p>{output.date}</p>
-                                </div>
+                                const output = detailsSplit(result.details)                              
+                                    return <div className='search'>
+                                        <div className='titleContainer'>
+                                            <h3 className='searchTitle'>{result.title}</h3>
+                                        </div>
+                                        <div className='detailsContainer'>
+                                            <p className='searchDetails'>{output.location}</p>
+                                            <p className='searchDetails'>{output.date}</p>
+                                        </div>
+                                    </div>
                             })}
                         </div>
                     )}
