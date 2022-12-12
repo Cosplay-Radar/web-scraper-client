@@ -6,9 +6,9 @@ import useState from 'react';
 import './convention.css'
 
 export function Convention () {
-    const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${currentPage}`);
-    const [pageCount, setPageCount] = useState(1);
-    const [currentPage, setCurrentPage] = useState(1);
+    const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
+    const [page, setPage] = useState(1);
+    const [pageCount, setPageCount] = useState(0);
 
     const detailsSplit = (string) => {
         const output = {date:'', location: ''}
@@ -21,6 +21,20 @@ export function Convention () {
           }
         }
         return output;
+      }
+
+      const handlePrevious = () => {
+        setPage((p) => {
+            if (p === 1) return p;
+            return p - 1;
+        })
+      }
+
+      const handleNext = () => {
+        setPage((p) => {
+            if (p === pageCount) return p;
+            return p + 1;
+        })
       }
 
     return (
@@ -51,6 +65,10 @@ export function Convention () {
                     )}
                     </div>
                 </div>
+            </div>
+            <div>
+                <button disabled={page === 1} onClick={handlePrevious}>Previous</button>
+                <button disabled={page === pageCount} onClick={handleNext}>Next</button>
             </div>
             <Footer/>
         </div>
