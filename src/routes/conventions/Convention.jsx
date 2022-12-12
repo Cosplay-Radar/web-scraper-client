@@ -23,15 +23,15 @@ export function Convention () {
         return output;
       }
 
-      const handlePrevious = () => {
-        if (page === 1) return
-        setPage(page + 1)
-      }
+    //   const handlePrevious = () => {
+    //     if (page === 1) return
+    //     setPage(page + 1)
+    //   }
 
-      const handleNext = () => {
-        if (page === pageCount) return
-        setPage(page - 1)
-      }
+    //   const handleNext = () => {
+    //     if (page === pageCount) return
+    //     setPage(page - 1)
+    //   }
 
     return (
         <div className='contentBody'>
@@ -63,8 +63,8 @@ export function Convention () {
                 </div>
             </div>
             <div id='pageButtons'>
-                <button onClick={handlePrevious}>Previous</button>
-                <button onClick={handleNext}>Next</button>
+                {/* <button onClick={handlePrevious}>Previous</button>
+                <button onClick={handleNext}>Next</button> */}
             </div>
             <Footer/>
         </div>
