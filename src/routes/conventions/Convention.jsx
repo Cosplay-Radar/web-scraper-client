@@ -6,9 +6,9 @@ import useState from 'react';
 import './convention.css'
 
 export function Convention () {
-    const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
     const [page, setPage] = useState(1);
     const [pageCount, setPageCount] = useState(0);
+    const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
 
     const detailsSplit = (string) => {
         const output = {date:'', location: ''}
@@ -24,6 +24,7 @@ export function Convention () {
       }
 
       const handlePrevious = () => {
+        setPageCount();
         setPage((p) => {
             if (p === 1) return p;
             return p - 1;
