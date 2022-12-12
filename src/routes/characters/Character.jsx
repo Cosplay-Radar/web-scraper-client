@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { Navbar } from '../../components/Navbar';
-import useFetch from '../../src/hooks/useFetch';
+import useFetch from '../../hooks/useFetch.js';
 import './character.css';
 import '../conventions/convention.css';
-import { Footer } from '../../components/Footer';
+import { Footer } from '../../components/Footer.jsx';
 
 export function Character () {
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/characters`);
