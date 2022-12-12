@@ -12,7 +12,6 @@ export function Convention () {
 
     const detailsSplit = (string) => {
         const output = {date:'', location: ''}
-        console.log(string, typeof string)
         for (let i = string.length; i > 0; i--) {
           if (!isNaN(parseInt(string[i]))) {
             output.date = string.slice(0, i+1);
