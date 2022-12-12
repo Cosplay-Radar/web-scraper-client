@@ -7,12 +7,11 @@ import './convention.css'
 
 export function Convention () {
     const [page, setPage] = useState(1);
-    const [pageCount] = useState(0);
+    const [pageCount, setPageCount] = useState(0);
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
 
     const detailsSplit = (string) => {
         const output = {date:'', location: ''}
-        console.log(string, typeof string)
         for (let i = string.length; i > 0; i--) {
           if (!isNaN(parseInt(string[i]))) {
             output.date = string.slice(0, i+1);
