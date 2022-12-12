@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Navbar } from '../../components/Navbar';
-import useFetch from '../../hooks/useFetch';
+import useFetch from '../../src/hooks/useFetch';
 import './character.css';
 import '../conventions/convention.css';
 import { Footer } from '../../components/Footer';
