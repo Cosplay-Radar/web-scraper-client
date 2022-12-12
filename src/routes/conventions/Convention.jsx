@@ -24,6 +24,7 @@ export function Convention () {
       }
 
       const handlePrevious = () => {
+        console.log(pageCount, setPage)
         // if (page === 1) return
         // setPage(page + 1)
       }
