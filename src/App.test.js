@@ -3,7 +3,6 @@ import App from './App';
 
 test('detailsSplit can divide the retrieved data', () => {
   const detailsSplit = (string) => {
-    console
     const output = {date:'', location: ''}
     for (let i = string.length; i > 0; i--) {
       if (!isNaN(parseInt(string[i]))) {
@@ -16,4 +15,3 @@ test('detailsSplit can divide the retrieved data', () => {
   }
   expect(detailsSplit('November 18-19-2022Wilberson Memorial Center')).toEqual({date:'November 18-19-2022',location: 'Wilberson Memorial Center'})
 });
-

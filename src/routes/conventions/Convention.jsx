@@ -1,12 +1,14 @@
 import React from 'react';
 import { Footer } from '../../components/Footer';
-
 import { Navbar } from '../../components/Navbar';
 import useFetch from '../../hooks/useFetch.js';
+import useState from 'react';
 import './convention.css'
 
 export function Convention () {
-    const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions`);
+    const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${currentPage}`);
+    const [pageCount, setPageCount] = useState(1);
+    const [currentPage, setCurrentPage] = useState(1);
 
     const detailsSplit = (string) => {
         const output = {date:'', location: ''}
@@ -18,7 +20,7 @@ export function Convention () {
             return output
           }
         }
-        return output
+        return output;
       }
 
     return (
