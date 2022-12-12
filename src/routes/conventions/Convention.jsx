@@ -7,7 +7,7 @@ import './convention.css'
 
 export function Convention () {
     const [page, setPage] = useState(1);
-    const [pageCount, setPageCount] = useState(0);
+    const [pageCount] = useState(0);
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
 
     const detailsSplit = (string) => {
@@ -24,7 +24,6 @@ export function Convention () {
       }
 
       const handlePrevious = () => {
-        setPageCount();
         setPage((p) => {
             if (p === 1) return p;
             return p - 1;
@@ -66,10 +65,10 @@ export function Convention () {
                     )}
                     </div>
                 </div>
-                <div>
-                    <button disabled={page === 1} onClick={handlePrevious}>Previous</button>
-                    <button disabled={page === pageCount} onClick={handleNext}>Next</button>
-                </div>
+            </div>
+            <div id='pageButtons'>
+                <button disabled={page === 1} onClick={handlePrevious}>Previous</button>
+                <button disabled={page === pageCount} onClick={handleNext}>Next</button>
             </div>
             <Footer/>
         </div>

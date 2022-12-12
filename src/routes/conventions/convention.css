@@ -37,3 +37,9 @@
 .serachDetailsContainer {
     margin-left: 10px;
 }
+
+#pageButtons {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
