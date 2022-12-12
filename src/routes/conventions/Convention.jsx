@@ -19,6 +19,7 @@ export function Convention () {
             return output
           }
         }
+        console.log(setPageCount)
         return output;
       }
 
