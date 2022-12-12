@@ -2,7 +2,7 @@ import React from 'react';
 import { Footer } from '../../components/Footer';
 
 import { Navbar } from '../../components/Navbar';
-import useFetch from '../../src/hooks/useFetch';
+import useFetch from '../../hooks/useFetch.js';
 import './convention.css'
 
 export function Convention () {
