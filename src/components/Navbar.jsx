@@ -11,8 +11,9 @@ export function Navbar () {
                 <Link className='homeLink' to={'/'}><h1>Cosplay Radar</h1></Link>
             </div>
             <div className='linkContainer'>
-                <Link className='navLink' to={'/conventions'}>Upcoming Conventions</Link>
+                <Link className='navLink' to={'/'}>Upcoming Conventions</Link>
                 <Link className='navLink' to={'/characters'}>Most Popular Characters</Link>
+                <Link className='navLink' to={'/home'}>Most Popular Characters</Link>
             </div>
         </div>
 
