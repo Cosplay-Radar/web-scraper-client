@@ -13,7 +13,7 @@ export function Navbar () {
             <div className='linkContainer'>
                 <Link className='navLink' to={'/'}>Upcoming Conventions</Link>
                 <Link className='navLink' to={'/characters'}>Most Popular Characters</Link>
-                <Link className='navLink' to={'/home'}>Most Popular Characters</Link>
+                <Link className='navLink' to={'/about'}>About</Link>
             </div>
         </div>
 

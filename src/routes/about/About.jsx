@@ -1,11 +1,11 @@
 import React from 'react';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
-import './home.css';
+import './about.css';
 
-export function Home () {
+export function About () {
     return (
-        <div id='homeContainer'>
+        <div id='aboutContainer'>
             <Navbar/> 
             <div className='aboutContainer'>
                 <div className='content'>
