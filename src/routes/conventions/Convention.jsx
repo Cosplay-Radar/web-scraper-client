@@ -19,21 +19,18 @@ export function Convention () {
             return output
           }
         }
+        console.log(setPageCount)
         return output;
       }
 
       const handlePrevious = () => {
-        setPage((p) => {
-            if (p === 1) return p;
-            return p - 1;
-        })
+        if (page === 1) return
+        setPage(page + 1)
       }
 
       const handleNext = () => {
-        setPage((p) => {
-            if (p === pageCount) return p;
-            return p + 1;
-        })
+        if (page === pageCount) return
+        setPage(page - 1)
       }
 
     return (
