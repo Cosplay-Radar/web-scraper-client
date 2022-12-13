@@ -12,9 +12,9 @@ export function Convention () {
 
     useEffect(() => {
         if(data) {
-            setPageCount(data[0][pageCount]);
+            setPageCount(data.pagination.pageCount);
         }
-    }, [data, pageCount]);
+    }, [data]);
 
     const detailsSplit = (string) => {
         const output = {date:'', location: ''}
@@ -55,8 +55,8 @@ export function Convention () {
                         <p id='loadingText'>'Loading, please wait.'</p>
                     ) : (
                         <div className='searchList'>
-                            { data.map(result => {
-                                if (result === undefined || result['count']) return <div></div>;
+                            { data['cons'].map(result => {
+                                if (result === undefined) return <div></div>;
                                 const output = detailsSplit(result.details)                              
                                     return <div className='search'>
                                         <div className='searchTitleContainer'>
