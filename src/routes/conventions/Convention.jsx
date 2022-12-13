@@ -47,7 +47,7 @@ export function Convention () {
                         <p id='loadingText'>'Loading, please wait.'</p>
                     ) : (
                         <div className='searchList'>
-                            { data['cons'].map(result => {
+                            { data.cons.map(result => {
                                 if (result === undefined) return <div></div>;
                                 const output = detailsSplit(result.details)                              
                                     return <div className='search'>
