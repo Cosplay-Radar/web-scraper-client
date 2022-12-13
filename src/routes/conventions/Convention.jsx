@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Footer } from '../../components/Footer';
 import { Navbar } from '../../components/Navbar';
 import useFetch from '../../hooks/useFetch.js';
-// import useState from 'react';
 import './convention.css'
 
 export function Convention () {
-    // const [page, setPage] = useState(1);
-    // const [pageCount, setPageCount] = useState(0);
+    const [page, setPage] = useState(1);
+    const [pageCount, setPageCount] = useState(0);
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions`);
 
     const detailsSplit = (string) => {
@@ -19,20 +18,20 @@ export function Convention () {
             return output
           }
         }
-        // console.log(setPageCount)
+        console.log(setPageCount)
         return output;
       }
 
-    //   const handlePrevious = () => {
-    //     console.log(pageCount, setPage)
-    //     // if (page === 1) return
-    //     // setPage(page + 1)
-    //   }
+      const handlePrevious = () => {
+        console.log(pageCount, setPage)
+        // if (page === 1) return
+        // setPage(page + 1)
+      }
 
-    //   const handleNext = () => {
-    //     // if (page === pageCount) return
-    //     // setPage(page - 1)
-    //   }
+      const handleNext = () => {
+        // if (page === pageCount) return
+        // setPage(page - 1)
+      }
 
     return (
         <div className='contentBody'>
@@ -63,10 +62,10 @@ export function Convention () {
                     </div>
                 </div>
             </div>
-            {/* <div id='pageButtons'>
+            <div id='pageButtons'>
                 <button onClick={handlePrevious}>Previous</button>
                 <button onClick={handleNext}>Next</button>
-            </div> */}
+            </div>
             <Footer/>
         </div>
     )
