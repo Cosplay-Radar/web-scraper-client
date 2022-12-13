@@ -12,7 +12,7 @@ export function Convention () {
 
     useEffect(() => {
         console.log(data)
-        if(data !== undefined) {
+        if(data.pagination.pageCount) {
             setPageCount(data.pagination.pageCount);
         }
     }, [data]);
