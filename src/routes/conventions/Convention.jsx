@@ -7,16 +7,8 @@ import './convention.css'
 
 export function Convention () {
     const [page, setPage] = useState(1);
-    const [pageCount,] = useState(0);
+    const [pageCount, setPageCount] = useState(0);
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
-
-    useEffect(() => {
-        console.log(data)
-        // console.log(data.length, )
-        // if(data) {
-        //     setPageCount(data.pagination.pageCount);
-        // }
-    }, [data]);
 
     const detailsSplit = (string) => {
         const output = {date:'', location: ''}
@@ -57,6 +49,7 @@ export function Convention () {
                         <p id='loadingText'>'Loading, please wait.'</p>
                     ) : data && data.cons ? (
                         <div className='searchList'>
+                            { setPageCount(data.pagination.pageCount) }
                             { data.cons.map(result => {
                                 if (result === undefined) return <div></div>;
                                 const output = detailsSplit(result.details)                              
