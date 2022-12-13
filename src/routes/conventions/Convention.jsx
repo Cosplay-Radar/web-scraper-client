@@ -48,7 +48,7 @@ export function Convention () {
                     ) : (
                         <div className='searchList'>
                             {
-                                console.log(data)
+                                console.log(data['cons'])
                             }
                             {/* { data.cons.map(result => {
                                 if (result === undefined) return <div></div>;
