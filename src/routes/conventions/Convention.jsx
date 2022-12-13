@@ -23,14 +23,13 @@ export function Convention () {
       }
 
       const handlePrevious = () => {
-        console.log(pageCount, setPage, page)
-        // if (page === 1) return
-        // setPage(page + 1)
+        if (page === 1) return
+        setPage(page + 1)
       }
 
       const handleNext = () => {
-        // if (page === pageCount) return
-        // setPage(page - 1)
+        if (page === pageCount) return
+        setPage(page - 1)
       }
 
     return (
