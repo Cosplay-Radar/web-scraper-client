@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { Footer } from '../../components/Footer';
 import { Navbar } from '../../components/Navbar';
 import useFetch from '../../hooks/useFetch.js';
@@ -7,7 +7,7 @@ import './convention.css'
 
 export function Convention () {
     const [page, setPage] = useState(1);
-    const [pageCount, setPageCount] = useState(0);
+    const [pageCount,] = useState(0);
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
 
     // useEffect(() => {
