@@ -11,6 +11,9 @@ export function Convention () {
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
 
     useEffect(() => {
+        while(loading === true) {
+            console.log("Loading")
+        }
         if(data) {
             setPageCount(data.pagination.pageCount);
         }
