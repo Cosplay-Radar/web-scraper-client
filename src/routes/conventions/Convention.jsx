@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Footer } from '../../components/Footer';
 import { Navbar } from '../../components/Navbar';
 import useFetch from '../../hooks/useFetch.js';
@@ -10,12 +10,13 @@ export function Convention () {
     const [pageCount,] = useState(0);
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
 
-    // useEffect(() => {
-    //     console.log(data.length, )
-    //     if(data) {
-    //         setPageCount(data.pagination.pageCount);
-    //     }
-    // }, [data]);
+    useEffect(() => {
+        console.log(data)
+        // console.log(data.length, )
+        // if(data) {
+        //     setPageCount(data.pagination.pageCount);
+        // }
+    }, [data]);
 
     const detailsSplit = (string) => {
         const output = {date:'', location: ''}
