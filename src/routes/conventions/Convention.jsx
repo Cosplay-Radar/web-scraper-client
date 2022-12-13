@@ -16,17 +16,17 @@ export function Convention () {
         }
     }, [data]);
 
-    const detailsSplit = (string) => {
-        const output = {date:'', location: ''}
-        for (let i = string.length; i > 0; i--) {
-          if (!isNaN(parseInt(string[i]))) {
-            output.date = string.slice(0, i+1);
-            output.location = string.slice(i+1, string.length);
-            return output
-          }
-        }
-        return output;
-      }
+    // const detailsSplit = (string) => {
+    //     const output = {date:'', location: ''}
+    //     for (let i = string.length; i > 0; i--) {
+    //       if (!isNaN(parseInt(string[i]))) {
+    //         output.date = string.slice(0, i+1);
+    //         output.location = string.slice(i+1, string.length);
+    //         return output
+    //       }
+    //     }
+    //     return output;
+    //   }
 
       const handlePrevious = () => {
         setPage((p) => {
@@ -55,7 +55,9 @@ export function Convention () {
                         <p id='loadingText'>'Loading, please wait.'</p>
                     ) : (
                         <div className='searchList'>
-                            { data.cons.map(result => {
+                            {
+                            console.log(data.cons)
+                            /* { data.cons.map(result => {
                                 if (result === undefined) return <div></div>;
                                 const output = detailsSplit(result.details)                              
                                     return <div className='search'>
@@ -67,7 +69,8 @@ export function Convention () {
                                             <p className='searchDetails'>{output.date}</p>
                                         </div>
                                     </div>
-                            })}
+                            })} */
+                            }
                         </div>
                     )}
                     </div>
