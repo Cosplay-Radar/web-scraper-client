@@ -10,12 +10,12 @@ export function Convention () {
     const [pageCount, setPageCount] = useState(0);
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
 
-    useEffect(() => {
-        console.log(data)
-        if(data) {
-            setPageCount(data.pagination.pageCount);
-        }
-    }, [data]);
+    // useEffect(() => {
+    //     console.log(data.length, )
+    //     if(data) {
+    //         setPageCount(data.pagination.pageCount);
+    //     }
+    // }, [data]);
 
     const detailsSplit = (string) => {
         const output = {date:'', location: ''}
