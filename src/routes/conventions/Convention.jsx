@@ -23,13 +23,17 @@ export function Convention () {
       }
 
       const handlePrevious = () => {
-        if (page === 1) return
-        setPage(page + 1)
+        setPage((p) => {
+            if (p === 1) return p;
+            return p - 1;
+        });
       }
 
       const handleNext = () => {
-        if (page === pageCount) return
-        setPage(page - 1)
+        setPage((p) => {
+            if (p === pageCount) return p;
+            return p + 1;
+        });
       }
 
     return (
@@ -62,8 +66,8 @@ export function Convention () {
                 </div>
             </div>
             <div id='pageButtons'>
-                <button onClick={handlePrevious}>Previous</button>
-                <button onClick={handleNext}>Next</button>
+                <button disabled={page === 1} onClick={handlePrevious}>Previous</button>
+                <button disabled={page === pageCount} onClick={handleNext}>Next</button>
             </div>
             <Footer/>
         </div>
