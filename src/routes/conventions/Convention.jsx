@@ -17,7 +17,7 @@ export function Convention () {
         if(data) {
             setPageCount(data.pagination.pageCount);
         }
-    }, [data]);
+    }, [data, loading]);
 
     const detailsSplit = (string) => {
         const output = {date:'', location: ''}
