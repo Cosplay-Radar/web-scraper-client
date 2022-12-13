@@ -8,6 +8,7 @@ export function Convention () {
     const [page, setPage] = useState(1);
     const [pageCount, setPageCount] = useState(0);
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
+    console.log(data)
 
     const detailsSplit = (string) => {
         const output = {date:'', location: ''}
