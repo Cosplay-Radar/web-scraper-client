@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { Footer } from '../../components/Footer';
 import { Navbar } from '../../components/Navbar';
 import useFetch from '../../hooks/useFetch.js';
@@ -9,6 +10,12 @@ export function Convention () {
     const [pageCount, setPageCount] = useState(0);
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
 
+    useEffect(() => {
+        if(data) {
+            setPageCount(data.pagination.pageCount);
+        }
+    }, [data]);
+
     const detailsSplit = (string) => {
         const output = {date:'', location: ''}
         for (let i = string.length; i > 0; i--) {
@@ -18,7 +25,6 @@ export function Convention () {
             return output
           }
         }
-        console.log(setPageCount)
         return output;
       }
 
@@ -43,6 +49,8 @@ export function Convention () {
                 <div className='column'>
                     <h2 className='columnTitle'>Upcoming Conventions</h2>
                     <div className='conventionContainer'>
+                        Page: {page}<br/>
+                        Page Count: {pageCount}
                     { loading ? (
                         <p id='loadingText'>'Loading, please wait.'</p>
                     ) : (
