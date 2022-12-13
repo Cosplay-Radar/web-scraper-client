@@ -11,6 +11,11 @@ export function Convention () {
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
 
     useEffect(() => {
+        if (!data) {
+            setTimeout(() => {
+                console.log("Delay for 3 seconds")
+            }, 3000)
+        }
         console.log(data)
         if(data.pagination.pageCount) {
             setPageCount(data.pagination.pageCount);
