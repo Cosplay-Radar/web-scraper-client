@@ -11,13 +11,10 @@ export function Convention () {
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
 
     useEffect(() => {
-        while(loading === true) {
-            console.log("Loading")
-        }
         if(data) {
-            setPageCount(data.pagination.pageCount);
+            setPageCount(data[0][pageCount]);
         }
-    }, [data, loading]);
+    }, [data, pageCount]);
 
     const detailsSplit = (string) => {
         const output = {date:'', location: ''}
@@ -58,8 +55,8 @@ export function Convention () {
                         <p id='loadingText'>'Loading, please wait.'</p>
                     ) : (
                         <div className='searchList'>
-                            { data['cons'].map(result => {
-                                if (result === undefined) return <div></div>;
+                            { data.map(result => {
+                                if (result === undefined || result['count']) return <div></div>;
                                 const output = detailsSplit(result.details)                              
                                     return <div className='search'>
                                         <div className='searchTitleContainer'>
