@@ -8,7 +8,7 @@ import './convention.css'
 export function Convention () {
     const [page, setPage] = useState(1);
     const [pageCount, setPageCount] = useState(0);
-    const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
+    const [data, loading] = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
 
     useEffect(() => {
         if (data) {
@@ -74,8 +74,8 @@ export function Convention () {
                     </div>
                 </div>
                 <div id='pageButtons'>
-                    Page: {page}<br/>
-                    Page Count: {pageCount}
+                    <p>Page: {page}</p><br/>
+                    <p>{!data.pagination.pageCount ? 'Loading' : {pageCount}}</p>
                     <button disabled={page === 1} onClick={handlePrevious}>Previous</button>
                     <button disabled={page === pageCount} onClick={handleNext}>Next</button>
                 </div>
