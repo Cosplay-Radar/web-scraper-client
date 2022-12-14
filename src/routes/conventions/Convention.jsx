@@ -43,8 +43,6 @@ export function Convention () {
                 <div className='column'>
                     <h2 className='columnTitle'>Upcoming Conventions</h2>
                     <div className='conventionContainer'>
-                        Page: {page}<br/>
-                        Page Count: {pageCount}
                     { loading ? (
                         <p id='loadingText'>'Loading, please wait.'</p>
                     ) : data && data.cons ? (
@@ -69,10 +67,12 @@ export function Convention () {
                 }
                     </div>
                 </div>
-            </div>
-            <div id='pageButtons'>
-                <button disabled={page === 1} onClick={handlePrevious}>Previous</button>
-                <button disabled={page === pageCount} onClick={handleNext}>Next</button>
+                <div id='pageButtons'>
+                    Page: {page}<br/>
+                    Page Count: {pageCount}
+                    <button disabled={page === 1} onClick={handlePrevious}>Previous</button>
+                    <button disabled={page === pageCount} onClick={handleNext}>Next</button>
+                </div>
             </div>
             <Footer/>
         </div>
