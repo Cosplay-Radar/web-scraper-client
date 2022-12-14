@@ -4,6 +4,7 @@ import { Footer } from '../../components/Footer';
 import { Navbar } from '../../components/Navbar';
 import useFetch from '../../hooks/useFetch.js';
 import './convention.css'
+import axios from 'axios';
 
 export function Convention () {
     const [page, setPage] = useState(1);
@@ -11,11 +12,17 @@ export function Convention () {
     const {data, loading} = useFetch(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
 
     useEffect(() => {
-        if (data) {
-            console.log(data)
-            setPageCount(data.pagination.pageCount);
-        }
-    }, [data]);
+        (
+            async function() {
+                try {
+                    const response = await axios.get(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
+                    setPageCount(response.pagination.pageCount);
+                } catch (error) {
+                    console.log(error)
+                }
+            }
+        )();
+    }, [data, page]);
 
     const detailsSplit = (string) => {
         const output = {date:'', location: ''}
