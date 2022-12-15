@@ -55,6 +55,10 @@
     flex-direction: row;
 }
 
+#pageSelect p {
+    padding: 4px;
+}
+
 #pageNav {
     display: flex;
     flex-direction: column;
