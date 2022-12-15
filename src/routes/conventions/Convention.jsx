@@ -87,8 +87,7 @@ export function Convention () {
                 </div>
                 <div id='pageNav'>
                     <div id='pageSelect'>
-                        <p>Page: {page}<br/></p>
-                        <p>Page Total:{data.pagination?.pageCount}</p>
+                        <p>Page: {page} / {data.pagination?.pageCount}</p>
                     </div>
                     <div id='buttonSelect'>
                         <button disabled={page === 1} onClick={handlePrevious}>Previous</button>
