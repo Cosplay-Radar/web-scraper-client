@@ -16,7 +16,11 @@ export function Convention () {
             async function() {
                 try {
                     const response = await axios.get(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
-                    setPageCount(response.pagination.pageCount);
+                    if (response.pagination.finalPage > 0) {
+                        setPageCount(response.pagination.pageCount + 1);
+                    } else {
+                        setPageCount(response.pagination.pageCount);
+                    }
                 } catch (error) {
                     console.log(error)
                 }
