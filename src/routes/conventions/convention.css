@@ -34,13 +34,18 @@
     border-bottom: black 1px solid;
 }
 
-.serachDetailsContainer {
+.searchDetailsContainer {
     margin-left: 10px;
 }
 
-#pageButtons {
+#buttonSelect {
     display: flex;
     flex-direction: row;
     padding: 10px;
+}
+
+#pageSelect {
+    display: flex;
+    flex-direction: column;
 }
 
