@@ -1,3 +1,8 @@
+.resultsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
 .conventionContainer {
     display: flex;
     align-items: center;
@@ -45,6 +50,11 @@
 }
 
 #pageSelect {
+    display: flex;
+    flex-direction: row;
+}
+
+#pageNav {
     display: flex;
     flex-direction: column;
 }
