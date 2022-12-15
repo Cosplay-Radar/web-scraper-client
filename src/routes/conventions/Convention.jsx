@@ -45,6 +45,7 @@ export function Convention () {
 
       const handleNext = () => {
         setPage((p) => {
+            setPageCount(data.pagination.pageCount);
             console.log(p, pageCount)
             if (p === pageCount) return p;
             return p + 1;
