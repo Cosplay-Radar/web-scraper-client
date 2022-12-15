@@ -49,7 +49,7 @@ export function Convention () {
 
       const handleNext = () => {
         setPage((p) => {
-            if (p === pageCount) return p;
+            if (p >= pageCount) return p;
             return p + 1;
         });
       }
