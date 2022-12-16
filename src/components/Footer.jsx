@@ -27,7 +27,7 @@ export function Footer() {
                 </div>
             </div>
             <p>Websites used: <b>animecons.com, google.com</b></p>
-            <p>©15th December 2022, Adventurer's Hoard, Alexander Brown, All rights reserved.</p>
+            <p>©16th December 2022, Adventurer's Hoard, Alexander Brown, All rights reserved.</p>
         </footer>
     )
 }
