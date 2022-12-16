@@ -46,7 +46,6 @@ export function Convention () {
       const handleNext = () => {
         setPage((p) => {
             setPageCount(data.pagination.pageCount);
-            console.log(p, pageCount)
             if (p === pageCount) return p;
             return p + 1;
         });
@@ -60,7 +59,9 @@ export function Convention () {
                     <h2 className='columnTitle'>Upcoming Conventions</h2>
                     <div className='conventionContainer'>
                     { loading ? (
-                        <p id='loadingText'>'Loading, please wait.'</p>
+                        <div id='loaderContainer'>
+                            <div className="spinner"></div>
+                        </div>
                     ) : data && data.cons ? (
                         <div className='searchList'>
                             { data.cons.map(result => {
