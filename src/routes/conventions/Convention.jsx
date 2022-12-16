@@ -85,7 +85,7 @@ export function Convention () {
                         </div>
                     ) : cache ? (
                         <div className='searchList'>
-                            { cache[url].map(result => {
+                            { cache.url.map(result => {
                                 if (result === undefined) return <div></div>;
                                 const output = detailsSplit(result.details)                              
                                     return <div className='search'>
