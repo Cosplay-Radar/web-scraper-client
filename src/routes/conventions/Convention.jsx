@@ -29,6 +29,7 @@ export function Convention () {
                         .get(url)
                         .then((response) => {
                             cache[url] = response.data.cons;
+                            console.log(cache)
                             setData(response.data);
                             setLoading(false);
                         })
@@ -84,9 +85,9 @@ export function Convention () {
                         <div id='loaderContainer'>
                             <div className="spinner"></div>
                         </div>
-                    ) : cache ? (
+                    ) : cache[url] ? (
                         <div className='searchList'>
-                            { cache.map(result => {
+                            { cache[url].map(result => {
                                 if (result === undefined) return <div></div>;
                                 const output = detailsSplit(result.details)                              
                                     return <div className='search'>
