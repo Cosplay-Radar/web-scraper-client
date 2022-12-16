@@ -28,6 +28,7 @@ export function Convention () {
                     await axios
                         .get(url)
                         .then((response) => {
+                            console.log(response)
                             cache[url] = response.cons;
                             setData(response.cons);
                             setPageCount(response.pagination.pageCount);
