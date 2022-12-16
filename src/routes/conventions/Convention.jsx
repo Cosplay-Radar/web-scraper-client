@@ -25,8 +25,7 @@ export function Convention () {
                     setData(data);
                     setLoading(false);
                 } else {
-                    const response = await axios.get(url);
-                    const data = await response.json();
+                    const data = await axios.get(url);
                     cache[url] = data;
                     setData(data);
                     setLoading(false);
