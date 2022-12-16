@@ -83,7 +83,7 @@ export function Convention () {
                         <div id='loaderContainer'>
                             <div className="spinner"></div>
                         </div>
-                    ) : cache ? (
+                    ) : cache.url && loading === false ? (
                         <div className='searchList'>
                             { cache.url.map(result => {
                                 if (result === undefined) return <div></div>;
