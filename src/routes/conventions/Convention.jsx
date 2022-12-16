@@ -9,34 +9,25 @@ export function Convention () {
     const [page, setPage] = useState(1);
     const [pageCount, setPageCount] = useState(0);
     const [loading, setLoading] = useState(false);
-    const cache = {};
     const url = `https://cosplay-radar.herokuapp.com/conventions?page=${page}`
 
     const useFetch = (url) => {
         const [data, setData] = useState([]);
-        console.log(cache)
         useEffect(() => {
             if (!url) return;
 
             const fetchData = async () => {
                 setLoading(true);
-                if (cache[url]) {
-                    const data = cache[url];
-                    setData(data);
-                    setLoading(false);
-                } else {
-                    await axios
-                        .get(url)
-                        .then((response) => {
-                            cache[url] = response.data.cons;
-                            setData(response.data);
-                            setLoading(false);
-                        })
-                        .catch(error => {
-                            console.error(error)
-                            return error
-                        })
-                }
+                await axios
+                    .get(url)
+                    .then((response) => {
+                        setData(response.data);
+                        setLoading(false);
+                    })
+                    .catch(error => {
+                        console.error(error)
+                        return error
+                    })
             };
             fetchData();
         }, [url]);
