@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { Footer } from '../../components/Footer';
 import { Navbar } from '../../components/Navbar';
-import useFetch from '../../hooks/useFetch.js';
 import './convention.css'
 import axios from 'axios';
 
