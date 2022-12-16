@@ -14,7 +14,7 @@ export function Convention () {
 
     const useFetch = (url) => {
         const [data, setData] = useState([]);
-        console.log(cache)
+        console.log
         useEffect(() => {
             if (!url) return;
 
