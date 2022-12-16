@@ -84,7 +84,7 @@ export function Convention () {
                         <div id='loaderContainer'>
                             <div className="spinner"></div>
                         </div>
-                    ) : cache && cache.cons ? (
+                    ) : cache ? (
                         <div className='searchList'>
                             { data.cons.map(result => {
                                 if (result === undefined) return <div></div>;
