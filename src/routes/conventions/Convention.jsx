@@ -40,7 +40,7 @@ export function Convention () {
             };
             fetchData();
         }, [url]);
-        console.log(cache.url)
+        console.log(cache[url])
         return { data };
     };
 
@@ -84,9 +84,9 @@ export function Convention () {
                         <div id='loaderContainer'>
                             <div className="spinner"></div>
                         </div>
-                    ) : cache.url && loading === false ? (
+                    ) : data.cons ? (
                         <div className='searchList'>
-                            { cache.url.map(result => {
+                            { data.cons.map(result => {
                                 if (result === undefined) return <div></div>;
                                 const output = detailsSplit(result.details)                              
                                     return <div className='search'>
