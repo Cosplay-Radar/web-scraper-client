@@ -40,6 +40,7 @@ export function Convention () {
             };
             fetchData();
         }, [url]);
+        console.log(cache.url)
         return { data };
     };
 
