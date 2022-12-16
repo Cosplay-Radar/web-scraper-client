@@ -25,11 +25,14 @@ export function Convention () {
                     setData(data);
                     setLoading(false);
                 } else {
-                    const data = await axios.get(url);
-                    cache[url] = data;
-                    setData(data);
-                    setLoading(false);
-                    setPageCount(data.pagination.pageCount);
+                    await axios
+                        .get(url)
+                        .then((response) => {
+                            cache[url] = response.cons;
+                            setData(response.cons);
+                            setPageCount(response.pagination.pageCount);
+                            setLoading(false);
+                        })
                 }
             };
             fetchData();
