@@ -13,7 +13,6 @@ export function Convention () {
     const url = `https://cosplay-radar.herokuapp.com/conventions?page=${page}`
 
     const useFetch = (url) => {
-        const [status, setStatus] = useState('idle');
         const [data, setData] = useState([]);
 
         useEffect(() => {
@@ -30,16 +29,16 @@ export function Convention () {
                     const data = await response.json();
                     cache[url] = data;
                     setData(data);
-                    setStatus(false);
+                    setLoading(false);
                     setPageCount(data.pagination.pageCount);
                 }
             };
             fetchData();
         }, [url]);
-        return {status, data};
+        return { data };
     };
 
-    useFetch(url)
+    let { data } = useFetch(url)
     
     const detailsSplit = (string) => {
         const output = {date:'', location: ''}
@@ -79,7 +78,7 @@ export function Convention () {
                         <div id='loaderContainer'>
                             <div className="spinner"></div>
                         </div>
-                    ) : data && data.cons ? (
+                    ) : cache && cache.cons ? (
                         <div className='searchList'>
                             { data.cons.map(result => {
                                 if (result === undefined) return <div></div>;
