@@ -33,6 +33,10 @@ export function Convention () {
                             setPageCount(response.pagination.pageCount);
                             setLoading(false);
                         })
+                        .catch(error => {
+                            console.error(error)
+                            return error
+                        })
                 }
             };
             fetchData();
