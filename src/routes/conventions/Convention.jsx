@@ -32,7 +32,6 @@ export function Convention () {
                             console.log(response.data.pagination.pageCount)
                             cache[url] = response.data.cons;
                             setData(response.data.cons);
-                            console.log(data)
                             setPageCount(response.data['pagination']['pageCount']);
                             setLoading(false);
                         })
@@ -44,6 +43,7 @@ export function Convention () {
             };
             fetchData();
         }, [url]);
+        console.log(data)
         return { data };
     };
 
