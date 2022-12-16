@@ -8,24 +8,39 @@ import axios from 'axios';
 export function Convention () {
     const [page, setPage] = useState(1);
     const [pageCount, setPageCount] = useState(0);
-    const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
+    const cache = {};
+    const url = `https://cosplay-radar.herokuapp.com/conventions?page=${page}`
 
-    useEffect(() => {
-        const fetchData = async () => {
-            setLoading(true);
-            try{
-                const response = await axios.get(`https://cosplay-radar.herokuapp.com/conventions?page=${page}`);
-                setData(response.cons);
-                setPageCount(response.pagination.pageCount);
-            } catch(err) {
-                console.error(err);
-            }
-            setLoading(false);
-        };
-        fetchData();
-    });
+    const useFetch = (url) => {
+        const [status, setStatus] = useState('idle');
+        const [data, setData] = useState([]);
 
+        useEffect(() => {
+            if (!url) return;
+
+            const fetchData = async () => {
+                setLoading(true);
+                if (cache[url]) {
+                    const data = cache[url];
+                    setData(data);
+                    setLoading(false);
+                } else {
+                    const response = await axios.get(url);
+                    const data = await response.json();
+                    cache[url] = data;
+                    setData(data);
+                    setStatus(false);
+                    setPageCount(data.pagination.pageCount);
+                }
+            };
+            fetchData();
+        }, [url]);
+        return {status, data};
+    };
+
+    useFetch(url)
+    
     const detailsSplit = (string) => {
         const output = {date:'', location: ''}
         for (let i = string.length; i > 0; i--) {
