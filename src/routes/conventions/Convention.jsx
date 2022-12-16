@@ -31,7 +31,7 @@ export function Convention () {
                             console.log(response)
                             cache[url] = response.cons;
                             setData(response.cons);
-                            setPageCount(response.pagination.pageCount);
+                            setPageCount(response.data.pagination.pageCount);
                             setLoading(false);
                         })
                         .catch(error => {
