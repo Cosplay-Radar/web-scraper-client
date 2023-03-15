@@ -7,7 +7,7 @@ export function Navbar () {
     return (
         <div className='navContainer'>
             <div className='titleContainer'>
-                <img className='logo' src="https://iili.io/ZoUvBS.png" alt="Adventurers Horde Logo (circle)" border="0" />
+                <img className='logo' src="https://iili.io/ZoUvBS.png" alt="Adventurers Hoard Logo (circle)" border="0" />
                 <Link className='homeLink' to={'/'}><h1>Cosplay Radar</h1></Link>
             </div>
             <div className='linkContainer'>
