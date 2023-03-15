@@ -55,3 +55,45 @@
     color: rgb(189, 189, 189);
     border: 2px rgb(189, 189, 189) solid;
 }
+
+.burger-menu {
+    height: 100%;
+    width: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.burger-bar {
+    width: 4em;
+    height: 0.5em;
+    background-color: white;
+    border-radius: 0.5em;
+}
+
+.menu {
+    height: 100%;
+    background-color: rgb(98, 98, 247);
+    position: fixed;
+    right:0;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 20vw;
+}
+
+.hidden {
+    right: -50%;
+    transition: ease-out .5s;
+}
+
+.visible {
+    transition: ease-out 0.5s;
+}
