@@ -65,7 +65,10 @@
 
 #pageNav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 40%;
+    align-items: center;
+    justify-content:space-between;
 }
 
 #loaderContainer {
