@@ -21,8 +21,10 @@ export function Navbar () {
 
     return (
         <div className='navContainer'>
-            <div className='titleContainer'>
+            <div>
                 <img className='logo' src="https://iili.io/ZoUvBS.png" alt="Adventurers Hoard Logo (circle)" border="0" />
+            </div>
+            <div className='titleContainer'>
                 <Link className='homeLink' to={'/'}><h1>Cosplay Radar</h1></Link>
             </div>
             <div className='burger-menu' onClick={updateMenu}>
