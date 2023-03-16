@@ -20,6 +20,10 @@ Welcome to the frontend portion of Cosplay Radar, where you can find all of the 
 ### Other:
 - Netlify
 
+### Scraped Sites:
+- animecons.com
+- zavvi.com
+
 ## Scripts:
 ### `npm start`
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
