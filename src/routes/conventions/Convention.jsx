@@ -13,6 +13,7 @@ export function Convention () {
 
     const useFetch = (url) => {
         const [data, setData] = useState([]);
+
         useEffect(() => {
             if (!url) return;
 
@@ -35,18 +36,6 @@ export function Convention () {
     };
 
     let { data } = useFetch(url)
-    
-    const detailsSplit = (string) => {
-        const output = {date:'', location: ''}
-        for (let i = string.length; i > 0; i--) {
-          if (!isNaN(parseInt(string[i]))) {
-            output.date = string.slice(0, i+1);
-            output.location = string.slice(i+1, string.length);
-            return output
-          }
-        }
-        return output;
-      }
 
       const handlePrevious = () => {
         setPage((p) => {
@@ -77,15 +66,14 @@ export function Convention () {
                     ) : data.cons ? (
                         <div className='searchList'>
                             { data.cons.map(result => {
-                                if (result === undefined) return <div></div>;
-                                const output = detailsSplit(result.details)                              
+                                if (result === undefined) return <div></div>;                        
                                     return <div className='search'>
                                         <div className='searchTitleContainer'>
                                             <h3 className='searchTitle'>{result.title}</h3>
                                         </div>
                                         <div className='searchDetailsContainer'>
-                                            <p className='searchDetails'>{output.location}</p>
-                                            <p className='searchDetails'>{output.date}</p>
+                                            <p className='searchDetails'>{result.location}</p>
+                                            <p className='searchDetails'>{result.date}</p>
                                         </div>
                                     </div>
                             })}
