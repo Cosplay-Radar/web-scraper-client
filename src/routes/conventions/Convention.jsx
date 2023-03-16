@@ -87,13 +87,9 @@ export function Convention () {
                     </div>
                 </div>
                 <div id='pageNav'>
-                    <div id='pageSelect'>
-                        <p>Page: {page} / {data.pagination?.pageCount}</p>
-                    </div>
-                    <div id='buttonSelect'>
-                        <button disabled={page === 1} onClick={handlePrevious}>Previous</button>
-                        <button disabled={page === pageCount} onClick={handleNext}>Next</button>
-                    </div>
+                    <button className='page-button' disabled={page === 1} onClick={handlePrevious}>Previous</button>
+                    <span className='page-counter'>Page: {page} / {data.pagination?.pageCount}</span>
+                    <button className='page-button' disabled={page === pageCount} onClick={handleNext}>Next</button>
                 </div>
             </div>
             <Footer/>
