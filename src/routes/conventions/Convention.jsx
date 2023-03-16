@@ -67,15 +67,17 @@ export function Convention () {
                         <div className='searchList'>
                             { data.cons.map(result => {
                                 if (result === undefined) return <div></div>;                        
-                                    return <div className='search'>
+                                    return (
+                                    <div className='search'>
                                         <div className='searchTitleContainer'>
                                             <h3 className='searchTitle'>{result.title}</h3>
                                         </div>
                                         <div className='searchDetailsContainer'>
                                             <p className='searchDetails'>{result.location}</p>
-                                            <p className='searchDetails'>{result.date}</p>
+                                            <p className='searchDetails date'>{result.date}</p>
                                         </div>
                                     </div>
+                                )
                             })}
                         </div>
                     ) : (
