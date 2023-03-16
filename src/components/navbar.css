@@ -41,13 +41,16 @@
     text-shadow: black;
     font-weight: 400;
     font-size: 28px;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 25px;
+    margin-left: 5%;
 }
 
 .nav-link:hover {
     color: whitesmoke;
     background-color: rgb(140, 140, 238);
     border-radius: 25px;
+    transition: ease-in 0.2s;
 }
 
 .burger-menu {
@@ -100,9 +103,8 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content:space-evenly;
-    width: 20vw;
+    width: 15vw;
 }
 
 .hidden {
