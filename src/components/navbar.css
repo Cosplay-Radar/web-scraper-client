@@ -41,11 +41,13 @@
     text-shadow: black;
     font-weight: 400;
     font-size: 28px;
+    padding: 5px;
 }
 
 .nav-link:hover {
-    color: rgb(189, 189, 189);
-    border: 2px rgb(189, 189, 189) solid;
+    color: whitesmoke;
+    background-color: rgb(140, 140, 238);
+    border-radius: 25px;
 }
 
 .burger-menu {
