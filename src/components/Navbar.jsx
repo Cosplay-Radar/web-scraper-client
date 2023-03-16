@@ -31,8 +31,8 @@ export function Navbar () {
                 <div className={burgerClass}></div>
             </div>
             <div className={menu}>
-                <Link className='nav-link' to={'/'}>Upcoming Conventions</Link>
-                <Link className='nav-link' to={'/characters'}>Most Popular Characters</Link>
+                <Link className='nav-link' to={'/'}>Conventions</Link>
+                <Link className='nav-link' to={'/characters'}>Characters</Link>
                 <Link className='nav-link' to={'/about'}>About</Link>
             </div>
         </div>
