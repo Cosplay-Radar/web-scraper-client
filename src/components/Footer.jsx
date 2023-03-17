@@ -21,7 +21,7 @@ export function Footer() {
                     </a>
                 </div>
             </div>
-            <p>©16th March 2023, Adventurer's Hoard, Alexander Brown, All rights reserved.</p>
+            <p>©17th March 2023, Adventurer's Hoard, Alexander Brown, All rights reserved.</p>
         </footer>
     )
 }
