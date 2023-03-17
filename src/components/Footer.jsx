@@ -11,7 +11,7 @@ export function Footer() {
                     </a>
                 </div>
                 <div class="contact-link">
-                    <a href="https://www.linkedin.com/in/alex-brown-2a6b7820a/" class="contact-image">
+                    <a href="https://www.linkedin.com/in/alexander-brown-2a6b7820a/" class="contact-image">
                         <img alt='linkedin logo' height='50px' width='50px' class="contact-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg"/>
                     </a>
                 </div>
